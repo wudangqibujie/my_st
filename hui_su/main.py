@@ -10,3 +10,12 @@
 #         撤销选择
 
 
+class Node:
+    def __init__(self, val):
+        self.val = val
+        self.childnode = []
+
+        
+
+
+
