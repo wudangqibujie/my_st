@@ -3,6 +3,9 @@
 # 只有后序位置才能通过返回值获取子树的信息。
 
 
+# 关于树的序列化，中序的反序列化是实现不了的
+
+
 class Node:
     def __init__(self, val):
         self.val = val
