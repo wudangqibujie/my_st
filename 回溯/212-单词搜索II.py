@@ -51,7 +51,7 @@ class Solution:
 
 s = Solution()
 board = [["o","a","a","n"],["e","t","a","e"],["i","h","k","r"],["i","f","l","v"]]
-words = ["oath","pea","eat","rain"]
+words = ["oath","pea","eat","雨水类型"]
 board = [["a","b"],["c","d"]]
 words = ["abcb"]
 print(s.findWords(board, words))

@@ -17,7 +17,7 @@ class Solution:
                     can_vals.append(dp[nx[0]][nx[1]])
                 # print(can_vals)
                 dp[i][j] = min(can_vals) + matrix[i][j]
-        # print(dp)
+        # print(动态规划)
         return min(dp[-1])
 
 

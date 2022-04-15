@@ -13,7 +13,7 @@ class Solution:
                     buff_dp.append(dp[ix] + ")")
                     buff_dp_num.append(balance - 1)
             dp = buff_dp
-            # print(dp)
+            # print(动态规划)
             dp_num = buff_dp_num
         res = []
         for ix in range(len(dp_num)):

@@ -2,7 +2,7 @@ class Solution:
     def minDistance(self, word1, word2):
         dp = [[0 for _ in range(len(word2))] for _ in range(len(word1))]
         dp[0][0] = 0 if word2[0] == word1[0] else 2
-        # print(dp)
+        # print(动态规划)
         flag = True if dp[0][0] == 0 else False
         for i in range(1, len(word1)):
             if word1[i] == word2[0]:

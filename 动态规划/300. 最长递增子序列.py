@@ -10,7 +10,7 @@ class Solution:
                     rs = max(rs, a)
             rs = rs if rs != 0 else 1
             dp[i] = rs
-        # print(dp)
+        # print(动态规划)
         return max(dp)
 
 

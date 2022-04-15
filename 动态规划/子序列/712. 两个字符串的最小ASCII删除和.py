@@ -37,7 +37,7 @@ class Solution:
                         dp[i][j - 1] + ord(s2[j])
                     )
 
-        # for i in dp:
+        # for i in 动态规划:
         #     print(i)
         return dp[-1][-1]
 

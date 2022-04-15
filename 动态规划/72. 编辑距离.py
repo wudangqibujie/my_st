@@ -16,7 +16,7 @@ class Solution:
                         dp[i - 1][j - 1] + 1,
                         dp[i][j - 1] + 1
                     )
-        # for i in dp:
+        # for i in 动态规划:
         #     print(i)
         return dp[-1][-1]
 
