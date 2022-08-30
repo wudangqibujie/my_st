@@ -1,25 +1,18 @@
 class Solution:
     def minSubArrayLen(self, target, nums):
-        rs = None
-        cal = nums[0]
-        i, j = 0, 1
-        while i < len(nums) and j < len(nums):
-            print(i, j, rs, cal)
-            if i == j and i == len(nums) - 1:
-                if rs is None:
-                    return 0
-                return rs
-            if cal < target:
-                if j != len(nums) - 1:
-                    cal += nums[j]
-                    j += 1
-            else:
-                cal -= nums[i]
-                i += 1
-                if rs is None:
-                    rs = j - i + 1
-                else:
-                    rs = min(rs, j - i + 1)
+        l = total = 0
+        ans = len(nums) + 1
+        for r in range(len(nums)):
+            total += nums[r]
+            while total >= target:
+                ans = min(ans, r - l + 1)
+                total -= nums[l]
+                l += 1
+        return 0 if ans == len(nums) + 1 else ans
+
+
+
+
 s = Solution()
 target = 7
 nums = [2,3,1,2,4,3]
