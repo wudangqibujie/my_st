@@ -16,12 +16,12 @@ class Solution(object):
             dp[1][t] = max(dp[1][t - 1], dp[3][t - 1])
             dp[2][t] = max(dp[1][t - 1], dp[3][t - 1]) - prices[t]
             dp[3][t] = max(dp[0][t - 1], dp[2][t - 1]) + prices[t]
-        # for i in dp:
-        #     print(i)
+        for i in dp:
+            print(i)
         return max([dp[1][-1], dp[3][-1]])
 
 
 print(max([float("-inf"), 3]))
-nums = [7]
+nums = [7,1,5,3,6,4]
 s = Solution()
 print(s.maxProfit(nums))
