@@ -22,6 +22,6 @@ class Solution(object):
 
 
 print(max([float("-inf"), 3]))
-nums = [7,1,5,3,6,4]
+nums = [1, 2, 3, 0, 2]
 s = Solution()
 print(s.maxProfit(nums))
