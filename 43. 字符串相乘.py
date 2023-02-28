@@ -1,31 +1,33 @@
 class Solution:
     def multiply(self, num1, num2):
-        flag = 1
-        ix = len(num1) - 1
-        buff = "0"
+
+        def multi_one(num):
+            ix = len(num1) - 1
+            scale = 1
+            rslt = 0
+            while ix >= 0:
+                rslt += int(num1[ix]) * int(num) * scale
+                ix -= 1
+                scale *= 10
+            return rslt
+
+        scale = 1
+        rslt = 0
+        ix = len(num2) - 1
         while ix >= 0:
-            jx = len(num2) - 1
-            while jx >= 0:
-                vl = int(num1[ix]) * int(num2[jx])
+            rslt += multi_one(num2[ix]) * scale
+            ix -= 1
+            scale *= 10
+        return str(rslt)
+
+
+s = Solution()
+num1 = "125"
+num2 = "456"
+num1 = "345534562"
+num2 = "25345345"
 
 
 
-
-
-    def addStrings(self, num1, num2):
-        i, j = len(num1), len(num2)
-        add = 0
-        rs = ""
-        while (i >= 0 or j >= 0):
-            i = i - 1 if i >= 0 else i
-            j = j - 1 if j >= 0 else j
-            a_vl = int(num1[i]) if i >= 0 else 0
-            b_vl = int(num2[j]) if j >= 0 else 0
-            if i < 0 and j < 0:
-                if add == 1:
-                    rs = "1" + rs
-                break
-            vl_bu = a_vl + b_vl + add
-            rs = str(vl_bu % 10) + rs
-            add = 1 if vl_bu >= 10 else 0
-        return rs
+print(s.multiply(num1, num2))
+print(int(num1) * int(num2))
